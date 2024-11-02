@@ -5,15 +5,19 @@ const elCloseNavbar = document.querySelector('.site-nav__header-btn');
 function removeItem() {
 	elFeaturesInners.forEach(elFeaturesInner => {
 		elFeaturesInner.classList.remove('active');
+		document.body.style.overflow = 'auto'
 	});
 }
 
 elHamurgerIcon.addEventListener('click', () => {
 	elNavbar.classList.toggle('active');
+	document.body.style.overflow = 'hidden'
 });
 
 elCloseNavbar.addEventListener('click', () => {
 	elNavbar.classList.toggle('active');
+	document.body.style.overflow = 'auto'
+
 });
 
 var swiper = new Swiper('.mySwiper', {
